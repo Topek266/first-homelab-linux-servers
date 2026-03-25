@@ -1,0 +1,10 @@
+//===================================//
+// Strefa lab.local mojego homelab   //
+//===================================//
+
+zone "lab.local" {                      // Definiuje nazwę strefy DNS
+    type master;                        // Ten serwer jest głównym serwerem tej strefy
+    file "/etc/bind/db.lab.local";      // Plik z rekordami DNS
+
+    allow-transfer { none; };           // Zabezpiecza przed kopiowaniem strefy
+};

@@ -1,4 +1,8 @@
 # DHCP Server
+Dokumentacja prostej konfiguracjii w moim projekcie.
+
+## Plik konfiguracyjny:
+`/etc/dhcp/dhcpd.conf`
 
 ## Cel
 Serwer DHCP przydziela adresy IP hostom w sieci 192.168.66.0/24.

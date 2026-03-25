@@ -1,4 +1,4 @@
-# First-sysadmin-lab
+# pierwszy-homelab-Linux-Servers
 
 Domowy lab sysadmin postawiony na KVM/QEMU z Ubuntu Server jako hostem.
 
