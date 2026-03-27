@@ -25,12 +25,11 @@ Nauka podstawowej konfiguracji serwera Apache2 i uruchomienie prostej strony www
 
 ## Aktywacja strony i przeładowanie serwera
 - Aktywacja VirtualHost:
+
 ```bash
-
-
 sudo a2ensite www.lab.local.conf
-
 sudo systemctl reload apache2
+sudo systemctl status apache2
 ```
 
 
@@ -38,7 +37,9 @@ sudo systemctl reload apache2
 
 
 ## Testy
-- Sprawdzenie uruchomienia strony w przeglądarce pod adresem `http://www.lab.local`
+```bash
+curl http://localhost
+```
 - Sprawdzenie logów error i access (`/var/log/apache2/`)
 - Test uprawnień plików i katalogów
- 
+
