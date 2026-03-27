@@ -18,3 +18,28 @@
 - dig @192.168.66.1 www.lab.local
 - dig @192.168.66.1 serwer.lab.local
 - nslookup www.lab.local
+
+---
+
+## Testy Apache2:
+
+### Test DNS + Apache
+- Sprawdzenie czy nazwa rozwiązuje się poprawnie:
+``` bash
+ping www.lab.local
+```
+
+Wynik: poprawne tłumaczenie na adres IP serwera
+
+### Test połączenia HTTP
+```bash
+curl http://www.lab.local
+```
+
+Wynik: zwraca kod HTML strony
+
+### Sprawdzenie portu 80
+```bash
+nc -zv 192.168.66.10 80
+```
+Wynik: port otwarty
