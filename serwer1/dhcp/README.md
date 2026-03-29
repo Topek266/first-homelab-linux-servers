@@ -29,4 +29,9 @@ sudo systemctl enable --now isc-dhcp-server
 sudo systemctl restart isc-dhcp-server
 sudo systemctl status isc-dhcp-server
 ```
+
+---
+
+## Testy na kliencie
+Znajdują się w katalogu hosts
 ```

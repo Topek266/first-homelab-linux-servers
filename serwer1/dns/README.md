@@ -19,3 +19,6 @@ Umożliwia testowanie klientów w połączeniu z serwerem DHCP.
 - W plikach zastosowano komentarze do rozdzielenia sekcji `Serwery nazw`, `Hosty` i `Root strefy wskazuje na NS` co ułatwia czytanie i przyszłe zmiany.
 
 ---
+
+## Testy na kliencie
+Znajdują się w katalogu hosts

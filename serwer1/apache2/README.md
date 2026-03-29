@@ -43,3 +43,11 @@ curl http://localhost
 - Sprawdzenie logów error i access (`/var/log/apache2/`)
 - Test uprawnień plików i katalogów
 
+---
+
+## Testy na kliencie
+Znajdują się w katalogu hosts
+
+
+
+
