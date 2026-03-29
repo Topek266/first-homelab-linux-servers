@@ -8,6 +8,8 @@
 
 ---
 
+# Testy na serwerze 1
+
 ## Testy DHCP:
 - Ping do servera DHCP: `ping 192.168.66.1`
 - Sprawdzenie IP: `ip a show enp1s0`
@@ -43,3 +45,14 @@ Wynik: zwraca kod HTML strony
 nc -zv 192.168.66.10 80
 ```
 Wynik: port otwarty
+
+---
+
+# Testy na serwerze 2
+
+## Testy Samba:
+- smbclient -L 192.168.66.2 -N  --> Lista dostępnych udziałów
+- smbclient 192.168.66.2/publiczny -N  --> Test udziału publicznego
+- smbclient 192.168.66.2/prywatny -U klientsmb  --> Test udziału prywatnego(z hasłem)
+- smbclient 192.168.66.2/prywatny -N --> Test odmowy dostępu
+
