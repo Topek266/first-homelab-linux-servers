@@ -1,7 +1,7 @@
 # Opis klienta
 
 ## Host: Ubuntu Server (klient)
-- IP: 192.168.66.52 (przydzielone przez DHCP)
+- IP: 192.168.66.49 (Zarezerwowane w DHCP)
 - Cel: testowanie serwerów
 - System Ubuntu Server 24.04
 - CPU/RAM: VM, AMD Ryzen 7, 1 CPU , 2GB RAM
@@ -55,4 +55,24 @@ Wynik: port otwarty
 - smbclient 192.168.66.2/publiczny -N  --> Test udziału publicznego
 - smbclient 192.168.66.2/prywatny -U klientsmb  --> Test udziału prywatnego(z hasłem)
 - smbclient 192.168.66.2/prywatny -N --> Test odmowy dostępu
+
+---
+
+## Testy NFS
+Najpierw musiałem zamontować katalogi
+
+  Publiczny:
+  ```bash
+  mount 192.168.66.0:/public /mnt/share/public
+  ```
+
+  Prywatny:
+  ```bash
+  mount 192.168.66.2:/private /mnt/share/private
+  ```
+
+Później stworzyłem katalog i w nim plik w udziale prywatnym z klienta i na serwerze sprawdziłem czy on się tam znajduje.
+
+
+
 
