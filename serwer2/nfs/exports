@@ -1,0 +1,12 @@
+# NFS Server
+
+# Dostępny dla wszystkich w sieci
+/srv/nfs/public         192.168.66.0/24(ro,sync,no_subtree_check)
+                        # ro --> tylko do odczytu
+                        # sync --> dane zapisywane od razu na dysku
+                        # no_subtree_check -->  wyłącza sprawdzanie czy należy do udostępnionego podkatalogu
+
+# Dostępny tylko dla hosta
+/srv/nfs/private        192.168.66.49(rw,sync,no_subtree_check,no_root_squash)
+                        # rw --> odczyt + zapis
+                        # no_root_squash --> klient ma prawo do root na serwerze
