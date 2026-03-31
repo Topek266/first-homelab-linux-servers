@@ -5,7 +5,7 @@ Dokumentacja prostej konfiguracjii w moim projekcie.
 `/etc/dhcp/dhcpd.conf`
 
 ## Cel
-Serwer DHCP przydziela adresy IP hostom w sieci 192.168.66.0/24.
+Konfiguracja serwera DHCP, który przydziela adresy IP hostom w sieci 192.168.66.0/24.
 
 ## Zakres
 192.168.66.50 - 192.168.66.100
@@ -24,7 +24,6 @@ Serwer DHCP przydziela adresy IP hostom w sieci 192.168.66.0/24.
 
 ## Uruchomienie, Restart i Status usługi
 ```bash
-```bash
 sudo systemctl enable --now isc-dhcp-server
 sudo systemctl restart isc-dhcp-server
 sudo systemctl status isc-dhcp-server
@@ -34,4 +33,11 @@ sudo systemctl status isc-dhcp-server
 
 ## Testy na kliencie
 Znajdują się w katalogu hosts
-```
+
+## Problemy i rozwiązania
+
+1. Konflikt zarezerwowanego adresu IP z przydzielanym adresem IP --> zarezerwowałem IP 192.168.66.50 i miałem ustawiony zakres przydzielania IP 
+   192.168.66.50 192.168.66.100 i nie mogło mi przydzielić tego IP, ponieważ bytł w zakresie przydziału.
+
+   Zmieniłem zarezerwowany adres IP na 192.168.66.49 i już błędu nie było.
+
