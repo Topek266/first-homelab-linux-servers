@@ -25,7 +25,11 @@ Konfiguracja serwera DHCP, który przydziela adresy IP hostom w sieci 192.168.66
 ## Uruchomienie, Restart i Status usługi
 ```bash
 sudo systemctl enable --now isc-dhcp-server
+```
+```bash
 sudo systemctl restart isc-dhcp-server
+```
+```bash
 sudo systemctl status isc-dhcp-server
 ```
 
