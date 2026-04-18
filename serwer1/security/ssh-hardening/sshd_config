@@ -1,0 +1,17 @@
+# SSH Hardening
+
+Port 2222                     # Zmiana portu z domyślnego na 2222
+PermitRootLogin no            # Wyłączenie logowania jako root
+PasswordAuthentication no     # Logujesz się kluczem SSH, a nie hasłem
+PermitEmptyPasswords no       # Wyłącza puste hasła
+PubkeyAuthentication yes      # Włącza logowanie kluczem publicznym
+MaxAuthTries 3                # Ogranicza próby logowania do 3 razy
+MaxSessions 5                 # Ogranicza liczbę równoczesnych sesji do 5
+X11Forwarding no              # Wyłącza forwarding X11
+
+ClientAliveInterval 600       # Sprawdza czy klient jest aktywny co 600 sekund
+ClientAliveCountMax 3         # Rozłącza po 3 nieudanych sprawdzeniach (30 min)
+
+AllowUsers admin              # Użytkownicy, którzy mają dostęp
+
+Protocol 2                    # Tylko SSH-2, wyłącza starsze SSH-1
