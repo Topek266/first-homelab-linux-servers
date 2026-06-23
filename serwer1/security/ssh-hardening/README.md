@@ -8,6 +8,14 @@ Celem było zastąpienie domyślnej, niezabezpieczonej konfiguracji SSH przez:
 - Zmianę domyślnego portu i ustawienie limitów bezpieczeństwa
 
 ## Co zostało wykonane
+Instalacja:
+```bash
+sudo apt instal openssh-server
+```
+```bash
+sudo systemctl enable ssh
+```
+
 1. Utworzenie użytkownika administracyjnego
 
 Zamiast logować się bezpośrednio jako root, utworzyłem osobnego użytkownika z uprawnieniami sudo.
