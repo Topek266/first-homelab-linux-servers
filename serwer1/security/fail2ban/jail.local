@@ -1,0 +1,33 @@
+[DEFAULT]
+# Czas bana w sekundach
+bantime = 3600
+# Czas w sekundach w którym fail2ban zlicza nieudane próby
+findtime = 600
+# Maksymalna liczba nieudanych prób w czasie findtime
+maxretry = 3
+# Te IP nigdy nie zostaną zbanowane
+ignoreip = 127.0.0.1/8 192.168.66.0/24
+
+[sshd]
+# Włącza ten jail
+enabled = true
+# Port na którym nasłuchuje
+port = 2222
+# Filtr który określa co szukać w logach
+filter = sshd
+# Ścieżka do logów który fail2ban monitoruje
+logpath = /var/log/auth.log
+# Maksymalna liczba nieudanych prób -- nadpisuje wartość z DEFAULT
+maxretry = 3
+
+[apache-auth]
+# Włącza ten jail
+enabled = true
+# Porty na których nasłuchuje
+port = 80,443
+# Filtr który określa co szukać w logach
+filter = apache-auth
+# Ścieżka do logów który fail2ban monitoruje
+logpath = /var/log/apache2/error.log
+# Maksymalna liczba nieudanych prób -- nadpisuje wartość z DEFAULT
+maxretry = 5
