@@ -21,4 +21,4 @@ Umożliwia testowanie klientów w połączeniu z serwerem DHCP.
 ---
 
 ## Testy na kliencie
-Znajdują się w katalogu hosts
+Znajdują się w katalogu [hosts](/hosts/serwer1)

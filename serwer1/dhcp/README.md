@@ -36,7 +36,7 @@ sudo systemctl status isc-dhcp-server
 ---
 
 ## Testy na kliencie
-Znajdują się w katalogu hosts
+Znajdują się w katalogu [hosts](/hosts/serwer1)
 
 ## Problemy i rozwiązania
 

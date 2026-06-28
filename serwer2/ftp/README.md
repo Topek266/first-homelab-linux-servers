@@ -79,5 +79,5 @@ sudo systemctl status vsftpd
 ```
 
 ## Testy na kliencie
-Testy znajdują się w katalogu **hosts**
+Testy znajdują się w katalogu [hosts](/hosts/serwer2)
 

@@ -42,4 +42,4 @@ NFS ma dwa udziały, 1) Publiczny i 2) Prywatny
 - Utworzyłem w prywatnym katalog a w nim plik i sprawdziłem czy znajduje się na kliencie
 
 ## Testy na kliencie
-Testy znajdują się w katalogu hosts
+Testy znajdują się w katalogu [hosts](/hosts/serwer2)
