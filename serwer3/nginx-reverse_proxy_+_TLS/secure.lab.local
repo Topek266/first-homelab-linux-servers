@@ -1,0 +1,48 @@
+server {
+  # nasłuchuje na porcie 80 {http}
+  listen 80;
+
+  # nazwa serwera
+  server_name secure.labnet
+
+  # obowiązuje dla całej strony
+  location / {
+
+    # Przekazuje żądanie do Apache2
+    proxy_pass http://192.168.66.1;
+
+    # Przekazuje nazwę strony do Apache2
+    proxy_set_header $host;
+
+    # Przekazuje prawdziwy adres IP klienta
+    proxy_set_header X-Real-IP $remote_addr;
+
+    # Przekazuje prawdziwy adres IP klienta ale dla wielu proxy
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+  }
+}
+
+server {
+
+  # nasłuchuje na porcie 443 {https}
+	listen 443 ssl;
+	
+  # nazwa serwera
+	server_name secure.labnet;
+
+  # ścieżka do certyfikatu
+	ssl_certificate /etc/nginx/ssl/secure.crt;
+	
+  # ścieżka do klucza
+	ssl_certificate_key /etc/nginx/ssl/secure.key
+	
+	location / {
+		proxy_pass http://192.168.66.1;
+		
+		proxy_set_header Host $host;
+		
+		proxt_set_header X-Real-IP $remote_addr;
+		
+		proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+	}
+}
