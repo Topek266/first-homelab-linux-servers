@@ -1,0 +1,26 @@
+# Plik konfiguracyjny rotacji logów
+
+# Ścieżka do logów
+/var/log/central/*/*.log {
+    # sprawdza raz dziennie
+    daily
+   
+    # zachowaj 7 starych wersji logów
+    rotate 7
+   
+    # po rotacji stare logi zostaną skompresowane
+    compress
+   
+    # jeżeli plik logrotate nie pokaże błędów
+    missingok
+   
+    # jeżeli plik istnieje ale jest pusty to logrotate nie będzie go obracał
+    notifempty
+    
+    # po rotacji stary plik jest przeniesiony do archiwum, tworzony jest nowy
+    # pusty plik, dzięki temu syslog-ng może dalej do niego zapisywać logi.
+    create 640 root adm
+
+    # zapisuje date skompresowanego pliku
+    dateext
+  }
