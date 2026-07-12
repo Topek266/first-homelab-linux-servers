@@ -1,6 +1,6 @@
 # pierwszy-homelab-Linux-Servers
 
-Domowy lab sysadmin postawiony na KVM/QEMU z Ubuntu Server jako hostem.
+Domowy lab  postawiony na KVM/QEMU z Ubuntu Server
 
 ## Środowisko
 - **Host:** Ubuntu Server (klient1) (AMD Ryzen 7)
@@ -14,6 +14,7 @@ Domowy lab sysadmin postawiony na KVM/QEMU z Ubuntu Server jako hostem.
 | Server1 | 192.168.66.1 | DHCP, DNS, Apache2 |
 | Server2 | 192.168.66.2 | Samba, NFS, FTP |
 | Server3 | 192.168.66.3 | Nginx (Reverse Proxy + TLS) |
+| Server4 | 192.168.66.4 | Syslog-ng, Prometheus, Grafana
 
 ## Cel
 Nauka administrowania systemami Linux - konfiguracja usług sieciowych, automatyzacja, podstawowe zabezpieczenia i dokumentowanie infrastruktury
