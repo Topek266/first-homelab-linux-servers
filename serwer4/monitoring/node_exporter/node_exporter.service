@@ -1,0 +1,31 @@
+# Plik usługi systemd dla Node Exporter
+
+# Sekcja opisująca usługę
+[Unit]
+
+## Opis usługi wyświetlany przez systemctl
+Description=Prometheus Node Exporter
+
+## Uruchom usługę dopiero po uruchomieniu sieci
+After=network.target
+
+# Opisuje jak uruchomić program
+[Service]
+
+## Użytkownik z którego uprawnieniami działa usługa
+User=node_exporter
+
+## Uruchom z grupą node_exporter
+Group=node_exporter
+
+## proces działa na pierwszym planie i systemd go nadzoruje
+Type=simple
+
+## Usługa która ma zostać uruchomiona
+ExecStart=/usr/local/bin/node_exporter
+
+# Kiedy usługa ma zostać uruchomiona
+[Install]
+
+## Uruchamiaj podczas normalnego startu systemu
+WantedBy=multi-user.target

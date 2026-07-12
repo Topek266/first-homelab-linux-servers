@@ -1,0 +1,33 @@
+# Plik usługi systemd dla Prometheus
+
+# Sekcja opisująca usługę
+[Unit]
+
+## Opis usługi wyświetlany przez systemctl
+Description=Prometheus
+
+## Uruchom usługę dopiero po uruchomieniu sieci
+After=network.target
+
+# Opisuje jak uruchomić program
+[Service]
+
+## Użytkownik z którego uprawnieniami działa usługa
+User=prometheus
+
+## Uruchom z grupą node_exporter
+Group=prometheus
+
+## proces działa na pierwszym planie i systemd go nadzoruje
+Type=simple
+
+## Usługa która ma zostać uruchomiona
+ExecStart=/usr/local/bin/prometheus \
+  --config.file=/etc/prometheus/prometheus.yml \
+  --storage.tsdb.path=/var/lib/prometheus
+
+# Kiedy usługa ma zostać uruchomiona
+[Install]
+
+## Uruchamiaj podczas normalnego startu systemu
+WantedBy=multi-user.target

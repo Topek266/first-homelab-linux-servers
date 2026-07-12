@@ -1,0 +1,18 @@
+# Konfiguracja Prometheus
+#
+# Dodaj to na końcu pliku
+
+# Nazwa monitorowanej usługi
+job_name: "node_exporter"
+  # Lista adresów wpisywanych ręcznie
+  static_configs:
+    # Adresy usług z których prometheus pobiera metryki
+    - targets:
+      - "192.168.66.1:9100"
+      - "192.168.66.2:9100"
+      - "192.168.66.3:9100"
+      - "192.168.66.4:9100"
+
+      # tag doklejany do metryki (do filtrowania w Grafana)
+      labels:
+        env: "homelab"
