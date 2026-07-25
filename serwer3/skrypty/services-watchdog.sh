@@ -1,17 +1,17 @@
 #!/bin/bash
 
 # ============================================================================================= #
-# OPIS:           Automatyczne monitorowanie i restart usług dhcp, dns, apache2 i node exporter #
+# OPIS:           Automatyczne monitorowanie i restart usług nginx i node exporter    #
 # LOKALIZACJA:    /opt/skrypty/services-watchdog.sh                                             #
-# WYMAGANIA:      Nadaj uprawnienia - sudo chmod -x /opt/skrypty/services-watchdog.sh
+# WYMAGANIA:      Nadaj uprawnienia - sudo chmod +x /opt/skrypty/services-watchdog.sh           #
 #                 Dodanie skryptu do visudo aby nie wpisywać hasła za każdym razem.             #
 #                 Dodanie kilku lini do konfiguracji syslog-ng na serwer4 (znajduje się to już  #
-#                 w konfiguracji syslog-ng na serwer4)                                          #
+#                 w konfiguracji syslog-ng na serwer4).                                         #
 # Użycie:         /opt/skrypty/services-watchdog.sh                                             #
 # ============================================================================================= #
 
 # Pętla przechodząca po kolei przez zdefiniowane uslugi
-for uslugi in bind9 isc-dhcp-server apache2 syslog-ng node_exporter; do
+for uslugi in nginx syslog-ng node_exporter; do
 
   # Ciche sprawdzenie czy usługi są aktywne
   if systemctl is-active --quiet "$uslugi"; then

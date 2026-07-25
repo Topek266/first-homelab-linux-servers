@@ -1,0 +1,5 @@
+# Konfiguracja pliku crontab
+#
+# Aby dodać coś do crontab najlepiej wpisz w terminalu "crontab -e"
+
+*/10 * * * * /opt/skrypty/service-watchdog.sh

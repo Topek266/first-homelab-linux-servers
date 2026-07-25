@@ -1,4 +1,4 @@
-# Plik konfiguracyjny rotacji logów
+# Plik konfiguracyjny log rotate
 
 # Ścieżka do logów
 /var/log/central/*/*.log {
