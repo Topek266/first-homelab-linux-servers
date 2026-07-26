@@ -112,5 +112,15 @@ ________________________
 - problemy z uprawnieniami w skrypcie backup.sh podczas jego wykonywania
 
 
-## Status
-Projekt w trakcie rozwoju
+## Status projektu
+✅ Projekt Zakończony
+
+## Kolejne kroki
+
+Ten projekt stanowi podstawę do mojego następnego projektu, który będzie skupiał się na sieci i jej bezpieczeństwie.
+
+Międzyinnymi będzie to:
+- pfSense
+- VLAN
+- WireGuard VPN
+- Firewall
