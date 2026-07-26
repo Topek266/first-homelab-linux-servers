@@ -12,7 +12,7 @@ ignoreip = 127.0.0.1/8 192.168.66.0/24
 # Włącza ten jail
 enabled = true
 # Port na którym nasłuchuje
-port = 2222
+port = 2223
 # Filtr który określa co szukać w logach
 filter = sshd
 # Ścieżka do logów który fail2ban monitoruje
