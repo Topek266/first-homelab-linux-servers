@@ -15,31 +15,9 @@ Celem projektu było praktyczne poznanie administracji systemami Linux poprzez s
 - **Wirtualizacja:** KVM/QEMU + virt-manager
 - **Sieć izolowana:** 192.168.66.0/24
 
-## Diagram serwerów
-                                     Homelab
-                                 192.168.66.0/24
+## Diagram
 
-                 ┌─────────────────┐          ┌─────────────────┐
-                 │  Client Linux   │          │ Client Windows  │
-                 └────────┬────────┘          └────────┬────────┘
-                          └──────────────┬─────────────
-                                         │
-══════════════════════════════════════════════════════════════════════════════════
-
-┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐ ┌──────────────────┐
-│     Server 1     │ │     Server 2     │ │     Server 3     │ │     Server 4     │
-├──────────────────┤ ├──────────────────┤ ├──────────────────┤ ├──────────────────┤
-│ DHCP             │ │ Samba            │ │ Nginx            │ │ Prometheus       │
-│ DNS              │ │ NFS              │ │ Reverse Proxy    │ │ Grafana          │
-│ Apache2          │ │ FTP              │ │ TLS              │ │ Syslog-ng        │
-│ Fail2ban         │ │ Fail2ban         │ │ Fail2ban         │ │ Fail2ban         │
-│ Node Exporter    │ │ Node Exporter    │ │ Node Exporter    │ │ Node Exporter    │
-│ Monitor Script   │ │ Monitor Script   │ │ Monitor Script   │ │ SSH Config Host  │
-│                                                                Backup Script    │
-└──────────────────┘ └──────────────────┘ └──────────────────┘ └──────────────────┘
-
-               Prometheus ─────────► Server1–3
-               Server1–3 ──────────► Syslog-ng
+![Diagram infrastruktury](screenshots/diagram-infrastruktury.png)
 
 ## Screenshots
 
